@@ -92,8 +92,8 @@ if (isset($_POST['logout'])) {
         .admin-panel {
             background-color: dodgerblue;
             color: white;
-            height: 100vh;
             padding: 20px;
+            margin-bottom: 0;
         }
 
         .admin-panel h4 {
@@ -126,7 +126,7 @@ if (isset($_POST['logout'])) {
 
             <div class="col-md-3 admin-panel">
                 <div class="d-flex my-4 justify-content-center">
-                    <img src="../Assets/responsive-design.png" class="mx-2" height="50" width="50" />
+                    <img src="../Assets/data-transfer.png" class="mx-2" height="50" width="50" />
                     <h3>GadgetHUB</h3>
                 </div>
                 <ul class="" id="sidebar">

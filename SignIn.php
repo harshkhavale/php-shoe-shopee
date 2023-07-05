@@ -2,10 +2,7 @@
 session_start();
 
 // Check if the user is already logged in, redirect to home page
-if (isset($_SESSION['username'])) {
-    header("Location: ./User/Store.php");
-    exit;
-}
+
 
 // Database connection settings
 $servername = "localhost";
