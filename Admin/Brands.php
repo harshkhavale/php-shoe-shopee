@@ -49,7 +49,7 @@
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "MobileShopee";
+        $dbname = "ShoeStore";
 
         // Create a connection
         $conn = new mysqli($servername, $username, $password, $dbname);

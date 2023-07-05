@@ -1,7 +1,7 @@
 <?php
 // Include your database connection code here
 $host = 'localhost';
-$dbname = 'MobileShopee';
+$dbname = 'ShoeStore';
 $username = 'root';
 $password = '';
 

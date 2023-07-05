@@ -30,32 +30,32 @@ include 'Header.php';
         </ol>
         <div class="carousel-inner" style="height: 67vh;">
           
-          <div class="carousel-item active" >
-            <div class="d-flex justify-content-end">
-
-            <img src="../Assets/Adds/Gerucht_-_Apple-Watch-Series-6-in-nieuwe-kleur_-_1_.jpg" height="400"  alt="Accessories">
-            </div>
-            <div class="carousel-caption position-absolute start-0 text-dark" style="margin-right: 70vh;">
-              <h5 class="display-3">Apple Watch</h5>
-              <h4>Find the perfect watches for your needs.</p>
-            </div>
-          </div>
           <div class="carousel-item " >
             <div class="d-flex justify-content-end">
 
-            <img src="../Assets/Adds/mobadd.png" height="500"   alt="Accessories">
+            <img src="../Assets/Adds/brown-leather-slip-men-s-shoes-fashion.jpg" height="400"  alt="Accessories">
+            </div>
+            <div class="carousel-caption position-absolute start-0 text-dark" style="margin-right: 50vh;">
+              <h5 class="display-3">Office Ware</h5>
+              <h4>Find the perfect shoes for your needs.</p>
+            </div>
+          </div>
+          <div class="carousel-item active " >
+            <div class="d-flex justify-content-end">
+
+            <img src="../Assets/Adds/fashion-shoes-sneakers.jpg" height="500"   alt="Accessories">
             </div>  
             <div class="carousel-caption d-none d-md-block text-dark" style="margin-right: 70vh;margin-bottom: 20vh;">
-              <h5 class="display-3">Galaxy S21+</h5>
-              <h4>Find the perfect smartphone's for your needs.</p>
+              <h5 class="display-3">Nike Air +1</h5>
+              <h4>Find the perfect SNEAKER'S for your needs.</p>
             </div>
           </div>
           <div class="carousel-item">
             <div class="d-flex ">
-            <img src="../Assets/Adds/Developer-dreams-up-a-stunning-macOS-style-menu-bar-for-iOS.jpg" class="ms-4" height="500" alt="Accessories">
+            <img src="../Assets/Adds/shoes.jpg" class="ms-4" height="500" alt="Accessories">
             </div>
             <div class="carousel-caption d-none d-md-block text-dark" style="margin-left: 100vh;margin-bottom: 20vh;">
-              <h5 class="display-1">Apple Tablet's</h5>
+              <h5 class="display-1">Jorden light</h5>
               <h4>Enhance your creativity .</p>
             </div>
           </div>
@@ -80,7 +80,7 @@ include 'Header.php';
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbname = "MobileShopee";
+        $dbname = "ShoeStore";
 
         // Create a connection
         $conn = new mysqli($servername, $username, $password, $dbname);

@@ -11,7 +11,7 @@ if (!isset($_SESSION['username'])) {
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "MobileShopee";
+$dbname = "ShoeStore";
 
 // Create database connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -23,7 +23,7 @@ if ($conn->connect_error) {
 
 // Fetch cart items for the current user
 $username = $_SESSION['username'];
-$cartQuery = "SELECT UserCartTbl.CartId, UserCartTbl.ProductId, UserCartTbl.DateTime, ProductDataTbl.ProductName, ProductDataTbl.ProductPrice, ProductDataTbl.ProductSellingPrice, ProductDataTbl.ProductDetails, ProductImageTbl.ImageName
+$cartQuery = "SELECT UserCartTbl.CartId, UserCartTbl.ProductId,UserCartTbl.Size, UserCartTbl.DateTime, ProductDataTbl.ProductName, ProductDataTbl.ProductPrice, ProductDataTbl.ProductSellingPrice, ProductDataTbl.ProductDetails, ProductImageTbl.ImageName
               FROM UserCartTbl
               INNER JOIN ProductDataTbl ON UserCartTbl.ProductId = ProductDataTbl.ProductId
               INNER JOIN ProductImageTbl ON UserCartTbl.ProductId = ProductImageTbl.ProductId
@@ -31,7 +31,7 @@ $cartQuery = "SELECT UserCartTbl.CartId, UserCartTbl.ProductId, UserCartTbl.Date
 $cartResult = $conn->query($cartQuery);
 
 // Fetch purchased products for the current user
-$purchasedQuery = "SELECT ProductDeliveryTbl.DeliveryId, ProductDeliveryTbl.ProductId, ProductDeliveryTbl.DateTime, ProductDataTbl.ProductName, ProductDataTbl.ProductPrice, ProductDataTbl.ProductSellingPrice, ProductDataTbl.ProductDetails, ProductImageTbl.ImageName
+$purchasedQuery = "SELECT ProductDeliveryTbl.DeliveryId, ProductDeliveryTbl.ProductId,ProductDeliveryTbl.Size, ProductDeliveryTbl.DateTime, ProductDataTbl.ProductName, ProductDataTbl.ProductPrice, ProductDataTbl.ProductSellingPrice, ProductDataTbl.ProductDetails, ProductImageTbl.ImageName
                    FROM ProductDeliveryTbl
                    INNER JOIN ProductDataTbl ON ProductDeliveryTbl.ProductId = ProductDataTbl.ProductId
                    INNER JOIN ProductImageTbl ON ProductDeliveryTbl.ProductId = ProductImageTbl.ProductId
@@ -135,6 +135,9 @@ include 'Header.php';
                         <div class="col-md-10">
                             <h4><?php echo $cartRow['ProductName']; ?></h4>
                             <p><?php echo $cartRow['ProductDetails']; ?></p>
+
+                            <p class="btn btn-warning inline-block rounded-4 p-2">selected size : <?php echo $cartRow['Size']; ?></p>
+
                             <p class="product-price btn btn-success">Price: ₹<?php echo intval($cartRow['ProductPrice']); ?></p>
                             <p class="product-price text-danger" style="text-decoration: line-through;">Selling Price: ₹<?php echo intval($cartRow['ProductSellingPrice']); ?></p>
                             <a href="?remove=true&cart_id=<?php echo $cartRow['CartId']; ?>" class="btn btn-danger">Remove from Cart</a>
@@ -164,6 +167,8 @@ include 'Header.php';
                         <div class="col-md-10">
                             <h4><?php echo $purchasedRow['ProductName']; ?></h4>
                             <p><?php echo $purchasedRow['ProductDetails']; ?></p>
+                            <p class="btn btn-warning inline-block rounded-4 p-2">selected size : <?php echo $purchasedRow['Size']; ?></p>
+
                             <p class="product-price btn btn-success">Price: ₹<?php echo intval($purchasedRow['ProductPrice']); ?></p>
                             <p class="product-price text-danger" style="text-decoration: line-through;">Selling Price: ₹<?php echo intval($purchasedRow['ProductSellingPrice']); ?></p>
                             <p class="delivery-date">Delivery Date: <?php echo $purchasedRow['DateTime']; ?></p>

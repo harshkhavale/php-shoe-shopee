@@ -1,3 +1,6 @@
+create a database in phpmyadmin 'ShoeStore'
+
+
 CREATE TABLE `BrandsTbl` (
     `BrandId`   INT            AUTO_INCREMENT NOT NULL,
     `BrandName` TEXT NULL,
@@ -40,6 +43,7 @@ CREATE TABLE `ProductDeliveryTbl` (
     `CustomerMoNo`    TEXT NULL,
     `CustomerName`    TEXT NULL,
     `PaymentMode`     TEXT NULL,
+    `Size` TEXT NOT NULL,
     PRIMARY KEY (`DeliveryId`)
 );
 
@@ -58,6 +62,7 @@ CREATE TABLE `UserCartTbl` (
     `CartId`    INT            AUTO_INCREMENT NOT NULL,
     `ProductId` INT            NULL,
     `DateTime`  DATETIME       NULL,
+    `Size` TEXT NOT NULL,
     `UserName`  TEXT NULL,
     PRIMARY KEY (`CartId`),
     CONSTRAINT `FK_UserCartTbl_ProductDataTbl` FOREIGN KEY (`ProductId`) REFERENCES `ProductDataTbl` (`ProductId`)

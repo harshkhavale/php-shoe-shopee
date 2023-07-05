@@ -42,7 +42,7 @@ if (isset($_POST['logout'])) {
         }
 
         .navbar {
-            background-color: dodgerblue;
+            background-color: orange;
             color: white;
         }
 
@@ -56,7 +56,7 @@ if (isset($_POST['logout'])) {
         }
 
         .jumbotron {
-            background-color: dodgerblue;
+            background-color: orange;
             color: white;
             padding: 3rem;
         }
@@ -90,7 +90,7 @@ if (isset($_POST['logout'])) {
         }
 
         .admin-panel {
-            background-color: dodgerblue;
+            background-color: orange;
             color: white;
             padding: 20px;
             margin-bottom: 0;
@@ -126,8 +126,8 @@ if (isset($_POST['logout'])) {
 
             <div class="col-md-3 admin-panel">
                 <div class="d-flex my-4 justify-content-center">
-                    <img src="../Assets/data-transfer.png" class="mx-2" height="50" width="50" />
-                    <h3>GadgetHUB</h3>
+                    <img src="../Assets/logo.png" class="mx-2" height="50" width="50" />
+                    <h3>shoestore</h3>
                 </div>
                 <ul class="" id="sidebar">
                     <li class="my-4"><a class="h4" href="dashboard.php" target="content">Dashboard</a></li>

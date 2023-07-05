@@ -8,7 +8,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "MobileShopee";
+$dbname = "ShoeStore";
 
 // Process the login form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -108,13 +108,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         
         .btn-primary {
-            background-color: dodgerblue;
-            border-color: dodgerblue;
+            background-color: orange;
+            border-color: orange;
         }
         
         .btn-primary:hover {
-            background-color: #0066cc;
-            border-color: #0066cc;
+            background-color: rgb(215, 140, 1);
+            border-color: rgb(215, 140, 1);
         }
         
         .signin-link {
@@ -123,20 +123,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         
         .signin-link a {
-            color: dodgerblue;
+            color: orange;
         }
         
         .signin-link a:hover {
-            color: #0066cc;
+            color: rgb(215, 140, 1);
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg " style="background-color: dodgerblue;">
+    <nav class="navbar navbar-expand-lg " style="background-color: orange;">
         <div class="container">
             <a class="navbar-brand text-decoration-none text-light" href="Index.php"> <div class="d-flex justify-content-center mb-0">
-            <img src="./Assets/data-transfer.png" class="mx-2" height="50" width="50" />
-            <h2>GadgetHUB</h2>
+            <img src="./Assets/logo.png" class="mx-2" height="50" width="50" />
+            <h2>shoestore</h2>
         </div></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -189,16 +189,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
     <div class="sticky-top" style="z-index: 7;">
-        <footer style="background-color: dodgerblue;color: white;">
+        <footer style="background-color: orange;color: white;">
             <div class="container text-center p-4" >
               <div class="row">
                 <div class="col-md-4">
                   <h4>About Us</h4>
-                  <p>we a online digital electronics store.</p>
+                  <p>we a online footwear store.</p>
                 </div>
                 <div class="col-md-4">
                   <h4>Contact Information</h4>
-                  <p>Email: info@gadgethub.com</p>
+                  <p>Email: info@shoestore.com</p>
                   <p>Phone: 123-456-7890</p>
                 </div>
                 <div class="col-md-4">
@@ -212,9 +212,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
               </div>
               <hr>
-              <p>&copy; 2023 Your Website. All rights reserved. | Designed with <span class="text-danger">&hearts;</span> by <a href="https://www.yourwebsitename.com" class="text-light">GadgetHUB.com</a></p>
+              <p>&copy; 2023 ShoeStore. All rights reserved. | Designed with <span class="text-danger">&hearts;</span> by <a href="https://www.yourwebsitename.com" class="text-light">ShoeStore.com</a></p>
             </div>
-          </footer></div>
+          </footer></div></body>
+
    
 </body>
 </html>

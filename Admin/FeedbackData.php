@@ -27,7 +27,7 @@
             <tbody>
                 <?php
                 // Connect to the database
-                $conn = mysqli_connect('localhost', 'root', '', 'MobileShopee');
+                $conn = mysqli_connect('localhost', 'root', '', 'ShoeStore');
                 if (!$conn) {
                     die("Database connection failed: " . mysqli_connect_error());
                 }

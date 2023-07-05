@@ -8,7 +8,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "MobileShopee";
+$dbname = "ShoeStore";
 
 // Initialize form data variables
 $name = "";
@@ -102,8 +102,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         .btn-primary {
-            background-color: dodgerblue;
-            border-color: dodgerblue;
+            background-color: orange;
+            border-color: orange;
         }
 
         .btn-primary:hover {

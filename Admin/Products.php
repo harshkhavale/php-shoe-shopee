@@ -44,7 +44,7 @@
 
                     // Insert the form data into the database
                     // Replace DB_CONNECTION with your actual database connection code
-                    $conn = new PDO("mysql:host=localhost;dbname=MobileShopee", "root", "");
+                    $conn = new PDO("mysql:host=localhost;dbname=ShoeStore", "root", "");
                     $query = $conn->prepare("INSERT INTO ProductDataTbl (ProductName, ProductPrice, ProductSellingPrice, ProductStock, ProductDetails, ProductDescription, ProductHighlight1, ProductHighlight2, 30DaysReturn, FreeDelivery, CashOnDelivery, BrandId, CategoryId) VALUES (:productName, :productPrice, :productSellingPrice, :productStock, :productDetails, :productDescription, :productHighlight1, :productHighlight2, :return30Days, :freeDelivery, :cashOnDelivery, :brandId, :categoryId)");
                     $query->bindParam(":productName", $productName);
                     $query->bindParam(":productPrice", $productPrice);
@@ -161,7 +161,7 @@
                             <?php
                             // Fetch brand data from the database and populate the dropdown options
                             // Replace DB_CONNECTION with your actual database connection code
-                            $conn = new PDO("mysql:host=localhost;dbname=MobileShopee", "root", "");
+                            $conn = new PDO("mysql:host=localhost;dbname=ShoeStore", "root", "");
                             $brandQuery = $conn->query("SELECT * FROM BrandsTbl");
                             while ($brand = $brandQuery->fetch(PDO::FETCH_ASSOC)) {
                                 echo "<option value='" . $brand['BrandId'] . "'>" . $brand['BrandName'] . "</option>";

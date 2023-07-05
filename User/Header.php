@@ -36,13 +36,13 @@ if (isset($_POST['logout'])) {
 </head>
 
 <body>
-    <div class="mt-0 w-100 shadow-lg sticky-top " style="z-index:4000;background-color:dodgerblue">
+    <div class="mt-0 w-100 shadow-lg sticky-top " style="z-index:4000;background-color:orange">
         <nav class="navbar navbar-expand-lg d-flex justify-content-between" style="font-family: 'Quicksand', sans-serif;">
             <div class="container-fluid " style="height:7vh">
                 <a class="navbar-brand text-decoration-none text-light" href="Store.php">
                     <div class="d-flex justify-content-center mb-0">
-                        <img src="../Assets/data-transfer.png" class="mx-2" height="50" width="50" />
-                        <h2>GadgetHUB</h2>
+                        <img src="../Assets/logo.png" class="mx-2" height="50" width="50" />
+                        <h2>shoestore</h2>
                     </div>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,45 +97,52 @@ if (isset($_SESSION["username"])) {
                 </button>
                 <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent2">
                     <ul class="navbar-nav d-flex justify-content-between">
-
+                    <li class="nav-item mx-4 d-flex justify-content-center">
+                            <a class="nav-link active" aria-current="page" href="ProductCategories.php?CATNAME=Accessories">
+                                <div class="m-auto text-center">
+                                    <img src="../Assets/Icons/footwear.png" style="height:5vh" />
+                                    <p class="">Sneaker's</p>
+                                </div>
+                            </a>
+                        </li>
 
                         <li class="nav-item mx-4 d-flex justify-content-center">
                             <a class="nav-link active" aria-current="page" href="ProductCategories.php?CATNAME=Smartphones">
                                 <div class="m-auto text-center">
-                                    <img src="../Assets/Icons/mobile-notch.png" style="height:5vh" />
-                                    <p class="">SmartPhones</p>
+                                    <img src="../Assets/Icons/baby-shoes.png" style="height:5vh" />
+                                    <p class="">Kid's</p>
                                 </div>
                             </a>
                         </li>
                         <li class="nav-item mx-4 d-flex justify-content-center">
                             <a class="nav-link active" aria-current="page" href="ProductCategories.php?CATNAME=TV&AV">
                                 <div class="m-auto text-center">
-                                    <img src="../Assets/Icons/screen.png" style="height:5vh" />
-                                    <p class="">TV&AV</p>
+                                    <img src="../Assets/Icons/flip-flops (1).png" style="height:5vh" />
+                                    <p class="">Chappal's</p>
                                 </div>
                             </a>
                         </li>
                         <li class="nav-item mx-4 d-flex justify-content-center">
-                            <a class="nav-link active" aria-current="page" href="ProductCategories.php?CATNAME=Laptops">
+                            <a class="nav-link active" aria-current="page" href="ProductCategories.php?CATNAME=FlipFlops">
                                 <div class="m-auto text-center">
-                                    <img src="../Assets/Icons/laptop.png" style="height:5vh" />
-                                    <p class="">Laptops</p>
+                                    <img src="../Assets/Icons/flip-flops.png" style="height:5vh" />
+                                    <p class="">Flip-Flop</p>
                                 </div>
                             </a>
                         </li>
                         <li class="nav-item mx-4 d-flex justify-content-center">
                             <a class="nav-link active" aria-current="page" href="ProductCategories.php?CATNAME=Speakers">
                                 <div class="m-auto text-center">
-                                    <img src="../Assets/Icons/speakers.png" style="height:5vh" />
-                                    <p class="">Speakers</p>
+                                    <img src="../Assets/Icons/high-heels.png" style="height:5vh" />
+                                    <p class="">Women's</p>
                                 </div>
                             </a>
                         </li>
                         <li class="nav-item mx-4 d-flex justify-content-center">
                             <a class="nav-link active" aria-current="page" href="ProductCategories.php?CATNAME=Tablets">
                                 <div class="m-auto text-center">
-                                    <img src="../Assets/Icons/tablet.png" style="height:5vh" />
-                                    <p class="">Tablets</p>
+                                    <img src="../Assets/Icons/shoes.png" style="height:5vh" />
+                                    <p class="">Sports</p>
                                 </div>
                             </a>
                         </li>
@@ -143,8 +150,8 @@ if (isset($_SESSION["username"])) {
                         <li class="nav-item mx-4 d-flex justify-content-center">
                             <a class="nav-link active" aria-current="page" href="ProductCategories.php?CATNAME=Smartwatches">
                                 <div class="m-auto text-center">
-                                    <img src="../Assets/Icons/watch-smart.png" style="height:5vh" />
-                                    <p class="">SmartWatches</p>
+                                    <img src="../Assets/Icons/shoe.png" style="height:5vh" />
+                                    <p class="">Office</p>
                                 </div>
                             </a>
                         </li>
@@ -152,20 +159,13 @@ if (isset($_SESSION["username"])) {
                         <li class="nav-item mx-4 d-flex justify-content-center">
                             <a class="nav-link active" aria-current="page" href="ProductCategories.php?CATNAME=Earphones">
                                 <div class="m-auto text-center">
-                                    <img src="../Assets/Icons/headphones.png" style="height:5vh" />
-                                    <p class="">EarPhones</p>
+                                    <img src="../Assets/Icons/sandal.png" style="height:5vh" />
+                                    <p class="">Sandal's</p>
                                 </div>
                             </a>
                         </li>
 
-                        <li class="nav-item mx-4 d-flex justify-content-center">
-                            <a class="nav-link active" aria-current="page" href="ProductCategories.php?CATNAME=Accessories">
-                                <div class="m-auto text-center">
-                                    <img src="../Assets/Icons/phone-charger.png" style="height:5vh" />
-                                    <p class="">Accessories</p>
-                                </div>
-                            </a>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>

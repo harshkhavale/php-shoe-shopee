@@ -23,7 +23,7 @@ if (!isset($_GET['PID'])) {
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "MobileShopee";
+$dbname = "ShoeStore";
 
 // Process the payment form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -36,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $customerMoNo = $_POST['phone'];
     $customerName = $_POST['name'];
     $paymentMode = $_POST['payment_mode'];
+    $size = $_GET['SIZE']; // Retrieve the value from the query string parameter SIZE
 
     // Create database connection
     $conn = new mysqli($servername, $username, $password, $dbname);
@@ -46,8 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Prepare and bind the insert statement
-    $stmt = $conn->prepare("INSERT INTO ProductDeliveryTbl (ProductId, DateTime, UserName, CustomerAddress, CustomerPinCode, CustomerMoNo, CustomerName, PaymentMode) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("isssssss", $productId, $dateTime, $username2, $customerAddress, $customerPinCode, $customerMoNo, $customerName, $paymentMode);
+    $stmt = $conn->prepare("INSERT INTO ProductDeliveryTbl (ProductId, DateTime, UserName, CustomerAddress, CustomerPinCode, CustomerMoNo, CustomerName, PaymentMode, Size) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("issssssss", $productId, $dateTime, $username2, $customerAddress, $customerPinCode, $customerMoNo, $customerName, $paymentMode, $size);
 
     // Execute the statement
     if ($stmt->execute()) {
@@ -110,8 +111,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         .btn-primary {
-            background-color: dodgerblue;
-            border-color: dodgerblue;
+            background-color: orange;
+            border-color: orange;
         }
 
         .btn-primary:hover {
@@ -143,7 +144,7 @@ include 'Header.php';
                 <?php if (isset($successMessage)) { ?>
                     <div class="alert alert-success"><?php echo $successMessage; ?></div>
                 <?php } ?>
-                <form action="<?php echo $_SERVER['PHP_SELF'] . '?PID=' . $_GET['PID']; ?>" method="POST">
+                <form action="<?php echo $_SERVER['PHP_SELF'] . '?PID=' . $_GET['PID'] . '&SIZE=' . $_GET['SIZE']; ?>" method="POST">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" id="name" name="name" required>
@@ -170,7 +171,7 @@ include 'Header.php';
                         </select>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary btn-block">Submit Payment</button>
+                        <button type="submit" class="btn btn-primary btn-block">Make Payment</button>
                     </div>
                 </form>
             </div>
